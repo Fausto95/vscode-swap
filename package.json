@@ -24,7 +24,8 @@
 		}]
 	},
 	"scripts": {
-		"test": "node ./test/runTest.js"
+		"test": "node ./test/runTest.js",
+		"pack": "vsce package"
 	},
 	"publisher": "fausto95",
 	"devDependencies": {
