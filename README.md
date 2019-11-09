@@ -10,3 +10,8 @@
 * Select two texts
 * Open `command palette` and type `Swap`
 * Press enter and voilà ✅
+
+
+### Changelog
+
+Current version: `v0.0.2`
