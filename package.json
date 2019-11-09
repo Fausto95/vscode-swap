@@ -2,7 +2,11 @@
 	"name": "swap",
 	"displayName": "Swap 🔁",
 	"description": "Swapping texts made easy",
-	"version": "0.0.1",
+	"repository": {
+		"url": "https://github.com/Fausto95/vscode-swap"
+	},
+	"version": "0.0.2",
+	"icon": ".github/assets/icon.png",
 	"engines": {
 		"vscode": "^1.40.0"
 	},
@@ -22,6 +26,7 @@
 	"scripts": {
 		"test": "node ./test/runTest.js"
 	},
+	"publisher": "fausto95",
 	"devDependencies": {
 		"@types/glob": "^7.1.1",
 		"@types/mocha": "^5.2.7",
