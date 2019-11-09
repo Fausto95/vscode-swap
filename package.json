@@ -1,42 +1,57 @@
 {
-	"name": "swap",
-	"displayName": "Swap 🔁",
-	"description": "Swapping texts made easy",
-	"repository": {
-		"url": "https://github.com/Fausto95/vscode-swap"
-	},
-	"version": "0.0.3",
-	"icon": ".github/assets/icon.png",
-	"engines": {
-		"vscode": "^1.40.0"
-	},
-	"categories": [
-		"Other"
-	],
-	"activationEvents": [
-		"onCommand:extension.swapSelections"
-	],
-	"main": "./extension.js",
-	"contributes": {
-		"commands": [{
-            "command": "extension.swapSelections",
-			"title": "Swap 🔁"
-		}]
-	},
-	"scripts": {
-		"test": "node ./test/runTest.js",
-		"package": "vsce package"
-	},
-	"publisher": "fausto95",
-	"devDependencies": {
-		"@types/glob": "^7.1.1",
-		"@types/mocha": "^5.2.7",
-		"@types/node": "^12.11.7",
-		"@types/vscode": "^1.40.0",
-		"eslint": "^6.6.0",
-		"glob": "^7.1.5",
-		"mocha": "^6.2.2",
-		"typescript": "^3.6.4",
-		"vscode-test": "^1.2.2"
-	}
+  "name": "swap",
+  "displayName": "Swap 🔁",
+  "description": "Swapping texts made easy",
+  "repository": {
+    "url": "https://github.com/Fausto95/vscode-swap"
+  },
+  "version": "0.0.4",
+  "icon": ".github/assets/icon.png",
+  "engines": {
+    "vscode": "^1.40.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.swapSelections"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.swapSelections",
+        "title": "Swap 🔁"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "extension.swapSelections",
+        "key": "ctrl+alt+8",
+        "mac": "cmd+alt+8",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "test": "node ./test/runTest.js",
+    "package": "vsce package"
+  },
+  "publisher": "fausto95",
+  "devDependencies": {
+    "@types/glob": "^7.1.1",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.11.7",
+    "@types/vscode": "^1.40.0",
+    "eslint": "^6.6.0",
+    "glob": "^7.1.5",
+    "mocha": "^6.2.2",
+    "typescript": "^3.6.4",
+    "vscode-test": "^1.2.2"
+  },
+  "__metadata": {
+    "id": "d4be0f67-f6df-4e2f-8610-465e32a43c95",
+    "publisherDisplayName": "Faustino Ntemo Kialungila",
+    "publisherId": "1507a2dc-e688-4ff8-ae5d-4566fce5789e"
+  }
 }
