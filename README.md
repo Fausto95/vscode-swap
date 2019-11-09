@@ -11,7 +11,12 @@
 * Open `command palette` and type `Swap`
 * Press enter and voilà ✅
 
+## Keyboard shortcuts
+
+* Windows: `CTRL+ALT+8`
+* Mac: `CMD+OPTION+8`
+
 
 ### Changelog
 
-Current version: `v0.0.3`
+Current version: `v0.0.4`
