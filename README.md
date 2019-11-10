@@ -19,4 +19,4 @@
 
 ### Changelog
 
-Current version: `v0.0.4`
+Current version: `v0.0.5`
