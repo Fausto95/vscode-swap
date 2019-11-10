@@ -7,7 +7,7 @@
 
 ### Instructions
 
-* Select two texts
+* Select two or more texts
 * Open `command palette` and type `Swap`
 * Press enter and voilà ✅
 
