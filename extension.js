@@ -20,19 +20,18 @@ function activate(context) {
 		// The code you place here will be executed every time your command is executed
 		const editor = vscode.window.activeTextEditor;
 		const selections = editor.selections;
-		if (selections.length > 2 || selections.length < 2) {
-			return vscode.window.showErrorMessage(`
-				Couldn't swap selected text 
-				either because you've only selected 
-				less or greater than 2 texts
-			`);
+		if (selections.length < 2) {
+			return vscode.window.showErrorMessage(`There's no selected texts to swap`);
 		} else {
-			const [firstSelection, secondSelection] = selections;
-			const firstSelectionText = editor.document.getText(firstSelection);
-			const secondSelectionText = editor.document.getText(secondSelection);
+			const selectionsAndTexts = selections.map((sel, i) => {
+				let idx = i + 1 > selections.length - 1 ? 0 : i + 1;
+				return {selection: selections[idx], text: editor.document.getText(sel)};
+			}).filter(sels => sels.text);
+			if (!selectionsAndTexts.length) return vscode.window.showErrorMessage(
+				`There's no selected texts to swap`
+			);
 			editor.edit(builder => {
-				builder.replace(firstSelection, secondSelectionText);
-				builder.replace(secondSelection, firstSelectionText);
+				selectionsAndTexts.forEach(({selection, text}) => builder.replace(selection, text))
 			});
 			return vscode.window.showInformationMessage('Swapped ✅');
 		}
