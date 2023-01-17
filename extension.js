@@ -30,10 +30,9 @@ function activate(context) {
 			if (!selectionsAndTexts.length) return vscode.window.showErrorMessage(
 				`There's no selected texts to swap`
 			);
-			editor.edit(builder => {
+			return editor.edit(builder => {
 				selectionsAndTexts.forEach(({selection, text}) => builder.replace(selection, text))
 			});
-			return vscode.window.showInformationMessage('Swapped ✅');
 		}
 	});
 
