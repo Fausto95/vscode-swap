@@ -46,4 +46,4 @@ Replace Text at Line format: __line-number:colStart-colEnd__.
 
 ### Changelog
 
-Current version: `v0.0.5`
+Current version: `v0.1.0`
