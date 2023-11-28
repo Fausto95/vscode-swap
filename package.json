@@ -1,57 +1,64 @@
 {
-  "name": "swap",
-  "displayName": "Swap 🔁",
-  "description": "Swapping texts made easy",
-  "repository": {
-    "url": "https://github.com/Fausto95/vscode-swap"
-  },
-  "version": "0.0.5",
-  "icon": ".github/assets/icon.png",
-  "engines": {
-    "vscode": "^1.40.0"
-  },
-  "categories": [
-    "Formatters"
-  ],
-  "activationEvents": [
-    "onCommand:extension.swapSelections"
-  ],
-  "main": "./extension.js",
-  "contributes": {
-    "commands": [
-      {
-        "command": "extension.swapSelections",
-        "title": "Swap 🔁"
-      }
-    ],
-    "keybindings": [
-      {
-        "command": "extension.swapSelections",
-        "key": "ctrl+alt+8",
-        "mac": "cmd+alt+8",
-        "when": "editorTextFocus"
-      }
-    ]
-  },
-  "scripts": {
-    "test": "node ./test/runTest.js",
-    "package": "vsce package"
-  },
-  "publisher": "fausto95",
-  "devDependencies": {
-    "@types/glob": "^7.1.1",
-    "@types/mocha": "^5.2.7",
-    "@types/node": "^12.11.7",
-    "@types/vscode": "^1.40.0",
-    "eslint": "^6.6.0",
-    "glob": "^7.1.5",
-    "mocha": "^6.2.2",
-    "typescript": "^3.6.4",
-    "vscode-test": "^1.2.2"
-  },
-  "__metadata": {
-    "id": "d4be0f67-f6df-4e2f-8610-465e32a43c95",
-    "publisherDisplayName": "Faustino Ntemo Kialungila",
-    "publisherId": "1507a2dc-e688-4ff8-ae5d-4566fce5789e"
-  }
+	"name": "swap",
+	"displayName": "Swap 🔁",
+	"description": "Swapping texts made easy",
+	"repository": {
+		"url": "https://github.com/Fausto95/vscode-swap"
+	},
+	"version": "0.1.0",
+	"icon": ".github/assets/icon.png",
+	"engines": {
+		"vscode": "^1.58.0"
+	},
+	"categories": ["Formatters"],
+	"activationEvents": [
+		"onCommand:extension.swapSelections",
+		"onCommand:extension.replaceTextAtLine"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.swapSelections",
+				"title": "Swap 🔁"
+			},
+			{
+				"command": "extension.replaceTextAtLine",
+				"title": "Replace Text at Line with Selected Text"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "extension.swapSelections",
+				"key": "ctrl+alt+8",
+				"mac": "cmd+alt+8",
+				"when": "editorTextFocus"
+			}
+		]
+	},
+	"scripts": {
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"package": "vsce package",
+		"format": "npx @biomejs/biome format ./** --write"
+	},
+	"publisher": "fausto95",
+	"devDependencies": {
+		"@biomejs/biome": "1.4.0",
+		"@types/glob": "^8.1.0",
+		"@types/mocha": "^10.0.6",
+		"@types/node": "^20.10.0",
+		"@types/vscode": "^1.84.2",
+		"eslint": "^6.6.0",
+		"glob": "^10.3.10",
+		"mocha": "^10.2.0",
+		"typescript": "^5.3.2",
+		"vscode-test": "^1.6.1"
+	},
+	"__metadata": {
+		"id": "d4be0f67-f6df-4e2f-8610-465e32a43c95",
+		"publisherDisplayName": "Faustino Kialungila",
+		"publisherId": "1507a2dc-e688-4ff8-ae5d-4566fce5789e"
+	}
 }
