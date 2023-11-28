@@ -8,7 +8,7 @@
 	"version": "0.1.0",
 	"icon": ".github/assets/icon.png",
 	"engines": {
-		"vscode": ">=1.82.0"
+		"vscode": ">=1.84.2"
 	},
 	"categories": ["Formatters"],
 	"activationEvents": [
