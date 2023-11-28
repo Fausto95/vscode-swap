@@ -34,6 +34,12 @@
 				"mac": "cmd+alt+8",
 				"when": "editorTextFocus"
 			}
+			{
+				"command": "extension.replaceTextAtLine",
+				"key": "ctrl+alt+9",
+				"mac": "cmd+alt+9",
+				"when": "editorTextFocus"
+			}
 		]
 	},
 	"scripts": {
